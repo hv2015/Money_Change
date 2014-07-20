@@ -16,5 +16,14 @@ def vueltas(cantidad):
 
 	for i in range(1, len(euros)):
 		if cantidad_uso >= euros[i]:
-			cantidad_uso = cantidad_uso - euros[i]
-			dev_euros[i] += 1
+			while True:
+				cantidad_uso = cantidad_uso - euros[i]
+				dev_euros[i] += 1
+				if cantidad_uso >= euros[i]:
+					continue
+				else:
+					break
+			
+	print " ".join(dev_euros)
+
+	return 0
