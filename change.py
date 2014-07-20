@@ -1,10 +1,5 @@
 num = input('Give me a number: ')
 
-try:
-    num_int = int(num)
-except ValueError:
-    print("Invalid number")
-
 def vueltas(cantidad):
 	euros = [500, 200, 100, 50, 20, 10, 5, 2, 1]
 	centimos = [50, 20, 10, 5, 2, 1]
@@ -24,6 +19,12 @@ def vueltas(cantidad):
 				else:
 					break
 			
-	print " ".join(dev_euros)
+	print(' '.join(map(str, dev_euros)))
 
 	return 0
+
+try:
+    num_int = int(num)
+    vueltas(num_int)
+except ValueError:
+    print("Invalid number")
