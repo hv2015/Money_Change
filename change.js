@@ -1,4 +1,4 @@
-var cantidad = prompt("Dime un numero");
+var cantidad = prompt("Dime un numero ");
 
 vueltas(cantidad);
 
